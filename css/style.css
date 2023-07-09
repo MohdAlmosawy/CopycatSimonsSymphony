@@ -179,3 +179,12 @@ h2 {
     align-items: flex-start;
     z-index: 9999;
 }
+
+/* player score board name */
+
+.playerName {
+    font-size: 20px;
+  }
+  .list_item_style {
+    opacity: 0.5;
+  }
