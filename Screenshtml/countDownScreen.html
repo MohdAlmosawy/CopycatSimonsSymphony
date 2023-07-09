@@ -7,12 +7,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
-    <div class="notification-container">
-      <div id="notification"></div>
-    </div>
+    
     <header>
         <div class="container-fluid">
           <div class="row">
@@ -29,26 +27,33 @@
           </div>
         </div>
     </header>
+
     <div class="Screen">
+        <div class="overlayBG">
+          <div class="countdownContainer">
+            <div class="countdown">3</div>
+          </div>
+        </div>
+    </div>      
+
+    <!-- <div class="scoreboardScreen">
         <div class="overlayBG">
           <div class="scoreboardContainer">
             <h1 class="scoreboardTitle">Copycat Hall of Fame</h1>
-          </br>
             <ul class="list-group topUsers">
-              <a class="list-group-item list-group-item-light list_item_style">User 1 - Score: 100</a>
-              <a class="list-group-item list-group-item-light list_item_style">User 2 - Score: 90</a>
-              <a class="list-group-item list-group-item-action list-group-item-light playerName">User 3 - Score: 80</a> 
-              <a class="list-group-item list-group-item-light list_item_style">User 4 - Score: 70</a>
-              <a class="list-group-item list-group-item-light list_item_style">User 5 - Score: 60</a>
+              <a class="list-group-item list-group-item-action list-group-item-light">User 1 - Score: 100</a>
+              <a class="list-group-item list-group-item-action list-group-item-light">User 2 - Score: 90</a>
+              <a class="list-group-item list-group-item-action list-group-item-light">User 3 - Score: 80</a>
+              <a class="list-group-item list-group-item-action list-group-item-light">User 4 - Score: 70</a>
+              <a class="list-group-item list-group-item-action list-group-item-light">User 5 - Score: 60</a>
             </ul>
-          </br>
             <div class="buttons">
-                <button type="button" class="btn btn-outline-secondary tryAgain" id="tryAgain">Keep Rhythming</button>
-                <button type="button" class="btn btn-outline-secondary share" id="share">Challenge a Friend!</button>
+                <button type="button" class="btn btn-outline-secondary tryAgain" id="tryAgain">Try Again</button>
+                <button type="button" class="btn btn-outline-secondary share" id="share">Share the Fun</button>
             </div>
           </div>
         </div>
-      </div>
+    </div> -->
 
     <div class="gameplayScreen">
         <div class="circle">
@@ -66,7 +71,7 @@
         </div>          
     </div>
 
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 </html>
