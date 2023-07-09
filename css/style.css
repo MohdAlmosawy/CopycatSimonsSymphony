@@ -132,8 +132,6 @@ h2 {
   
 /* scoreScreen styling */
 
-
-
   .scoreContainer {
     text-align: center;
     color: white;
@@ -164,6 +162,9 @@ h2 {
   
   .countdown {
     font-size: 30vh;
+  }
+  .countDownScreen{
+    z-index: 999;
   }
  
   /* Sharing the game */

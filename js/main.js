@@ -1,5 +1,4 @@
-// coloring the game title in main menu, un commit at end 
-
+// coloring the game title in main menu
 const textElement = document.getElementById('gameName');
 const text = textElement.textContent;
 const colorsPalette = ['rgb(255, 65, 54)', 'rgb(0, 116, 217)', 'rgb(46, 204, 64)', 'rgb(255, 220, 0)', 'white'];
@@ -12,9 +11,7 @@ for (let i = 0; i < text.length; i++) {
 textElement.innerHTML = styledText;
 
 // share the fun function
-
 document.getElementById("share").addEventListener("click", shareTheFun);
-
 function shareTheFun() {
     const message = "Hey there! I just played this incredible game called Copycat Simons' Symphony. It's so addictive and challenging! You've got to check it out. Here's the link: [game link].";
     
@@ -62,7 +59,61 @@ function shareTheFun() {
       notificationDiv.innerHTML = '';
     }, 5000);
   }
-  
-  
-  
 
+// screen visability logic
+
+// Hide all other screens initially
+document.getElementById("countDownScreen").style.visibility = "hidden";
+document.getElementById("gamePlayScreen").style.visibility = "hidden";
+document.getElementById("scoreScreen").style.visibility = "hidden";
+document.getElementById("congratulationsScreen").style.visibility = "hidden";
+document.getElementById("scoreboardScreen").style.visibility = "hidden";
+
+// Get the Play button element
+const playButton = document.getElementById("Play");
+
+// Add event listener for the click event
+playButton.addEventListener("click", startCounterAndShowGame);
+
+// show the count down screen, count down, and show gamePlayScreen
+function startCounterAndShowGame() 
+{
+  //Show the gamePlayScreen underneeth the countdown screen
+  const gamePlayScreen = document.getElementById("gamePlayScreen");
+  gamePlayScreen.style.visibility = "visible";
+
+  // Hide the main menu screen
+  const mainMenuScreen = document.getElementById("mainMenuScreen");
+  mainMenuScreen.style.visibility = "hidden";
+
+  // Show the countdown screen
+  const countdownScreen = document.getElementById("countDownScreen");
+  countdownScreen.style.visibility = "visible";
+
+  // Play the countdown sound
+  const audio = new Audio('assets/Audio/simpleGameCountdown.wav');
+  audio.play();
+
+  // Change the text inside countDownNumbers
+  const countDownNumbers = document.getElementById('countDownNumbers');
+  countDownNumbers.textContent = '9';
+
+  // Define the countdown numbers
+  const countDownArray = ['3', '2', '1', 'Go'];
+
+  // Iterate over the countDownArray
+  for (let i = 0; i < countDownArray.length; i++) {
+    // Update the text inside countDownNumbers
+    const countDownElement = document.getElementById('countDownNumbers');
+    countDownElement.textContent = countDownArray[i];
+    // Delay between countdown numbers (1 second)
+    const delay = 1000;
+    // Delay using setTimeout
+    setTimeout(() => {
+      // Hide the countDownScreen after the last countdown number
+      if (i === countDownNumbers.length - 1) {
+        countDownScreen.style.visibility = 'hidden';
+      }
+    }, delay * i);
+  }
+}
