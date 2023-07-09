@@ -76,9 +76,8 @@ const playButton = document.getElementById("Play");
 playButton.addEventListener("click", startCounterAndShowGame);
 
 // show the count down screen, count down, and show gamePlayScreen
-function startCounterAndShowGame() 
-{
-  //Show the gamePlayScreen underneeth the countdown screen
+function startCounterAndShowGame() {
+  // Show the gamePlayScreen underneath the countdown screen
   const gamePlayScreen = document.getElementById("gamePlayScreen");
   gamePlayScreen.style.visibility = "visible";
 
@@ -94,26 +93,25 @@ function startCounterAndShowGame()
   const audio = new Audio('assets/Audio/simpleGameCountdown.wav');
   audio.play();
 
-  // Change the text inside countDownNumbers
-  const countDownNumbers = document.getElementById('countDownNumbers');
-  countDownNumbers.textContent = '9';
-
   // Define the countdown numbers
-  const countDownArray = ['3', '2', '1', 'Go'];
+  const countDownArray = ['2', '1', 'Go'];
+
+  // Define a separate function for the setTimeout logic
+  function runCountdown(index) {
+    setTimeout(() => {
+      // Update the text inside countDownNumbers
+      const countDownElement = document.getElementById('countDownNumbers');
+      countDownElement.textContent = countDownArray[index];
+
+      // Hide the countDownScreen after the last countdown number
+      if (index === countDownArray.length - 1) {
+        countdownScreen.style.visibility = 'hidden';
+      }
+    }, (index + 1) * 1000); // Delay between countdown numbers (1 second)
+  }
 
   // Iterate over the countDownArray
   for (let i = 0; i < countDownArray.length; i++) {
-    // Update the text inside countDownNumbers
-    const countDownElement = document.getElementById('countDownNumbers');
-    countDownElement.textContent = countDownArray[i];
-    // Delay between countdown numbers (1 second)
-    const delay = 1000;
-    // Delay using setTimeout
-    setTimeout(() => {
-      // Hide the countDownScreen after the last countdown number
-      if (i === countDownNumbers.length - 1) {
-        countDownScreen.style.visibility = 'hidden';
-      }
-    }, delay * i);
+    runCountdown(i);
   }
 }
