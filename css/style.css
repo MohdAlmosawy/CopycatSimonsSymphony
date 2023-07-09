@@ -30,6 +30,24 @@ a {
     background-color: rgb(255, 220, 0);
   }
 
+  .Screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .overlayBG {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 /* Header Styling  */
 
 .headerContainer{
@@ -113,23 +131,7 @@ h2 {
   
 /* scoreScreen styling */
 
-  .scoreScreen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-  }
 
-  .overlayBG {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, .8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 
   .scoreContainer {
     text-align: center;
@@ -149,19 +151,16 @@ h2 {
 
   /* scoreboard styling */
 
-  .scoreboardScreen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-  }
-
   .buttons {
     display: flex;
     justify-content: center;
     gap: 10px;
     margin-top: 10px;
     /* i want to make them cetered */
+  }
+
+  /* countDown styles */
+  
+  .countdown {
+    font-size: 30vh;
   }
