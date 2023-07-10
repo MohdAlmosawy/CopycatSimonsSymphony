@@ -189,17 +189,17 @@ function showScoreScreen() {
 }
 
 function checkHighScore() {
-  const currentScoreElements = document.getElementsByClassName("currentScore");
-  const highScoreElements = document.getElementsByClassName("highScore");
-  
+  const currentScoreElements = document.querySelectorAll(".currentScore");
+  const highScoreElements = document.querySelectorAll(".highScore");
+
   // Update the currentScore elements
-  Array.from(currentScoreElements).forEach(element => {
+  currentScoreElements.forEach(element => {
     element.textContent = currentScore;
   });
-  
+
   // Update the highScore elements if necessary
-  Array.from(highScoreElements).forEach(element => {
-    const highScore = parseInt(element.textContent);
+  highScoreElements.forEach(element => {
+    const highScore = element.textContent;
     if (currentScore > highScore) {
       element.textContent = currentScore;
     }
