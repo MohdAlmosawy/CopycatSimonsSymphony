@@ -131,6 +131,9 @@ let currentScore = 0;
 // Declare global array to hold the computer sequence
 let sequence = [];
 
+// Declare global array to hold the user input
+let userSeq = [];
+
 // Function to add a random choice to the computer sequence and play the full sequence
 function addAndPlay() {
   // Generate a random choice
@@ -160,10 +163,34 @@ function playSequence() {
 
 // Setup event listener to capture player input and store it
 function setUpEventListener() {
+  const quarters = document.getElementsByClassName("quarter");
+
   // Set up event listener to capture player input
+  for (let i = 0; i < quarters.length; i++) {
+    quarters[i].addEventListener("click", handleUserInput());
+  }
   // Store the captured input in a player sequence array
+  userSeq.push(i + 1);
   // Call the compareSequences function
+  compareSequences();
 }
+
+// //Testing the function
+// // Setup event listener to capture player input and store it
+// function setUpEventListener() {
+//   const quarters = document.getElementsByClassName("quarter");
+
+//   // Set up event listener to capture player input
+//   for (let i = 0; i < quarters.length; i++) {
+//     quarters[i].addEventListener("click", () => {
+//       console.log("User clicked on quarter", i + 1);
+//     });
+//   }
+// }
+
+// // Call the setup event listener
+// setUpEventListener();
+
 
 // Compare the player sequence with the computer sequence
 function compareSequences() {
@@ -184,9 +211,12 @@ function checkHighScore() {
 // Handle correct or incorrect user input
 function handleUserInput() {
   // If gameStatus is true
+  if (gameStatus){
   // Call addAndPlay to continue the game
+  addAndPlay()
+  }else{
+  // set gameStatus to false
+  gameStatus = false;
   // Otherwise, show the score screen
+  }
 }
-
-// Setup event listener and validate user input against the generated sequences
-setUpEventListener();
