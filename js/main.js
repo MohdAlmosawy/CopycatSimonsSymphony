@@ -118,14 +118,54 @@ function startCounterAndShowGame() {
 
 ////////////////////capturing and validating player input against the generated sequences.
 
-// define array to hold the computer sequence.
+// Declare global variable gameStatus, initially set to true
+let gameStatus = true;
 
-// function to add random choise to the computer sequence and play whenever called
+// Declare global variable currentScore, initially set to 0
+let currentScore = 0;
 
-// setup event listener to capture player input and store it
+// Declare global array to hold the computer sequence
+let sequence = [];
 
-// compair the player sequence with the computer sequence
+// Function to add a random choice to the computer sequence and play the full sequence
+function addAndPlay() {
+  // Generate a random choice and add it to the sequence
+  // Play the full sequence one time
+  // Call the event listener to capture player input
+}
 
-// what happened if userinput is correct (we will call addAndPlay)
+// Setup event listener to capture player input and store it
+function setUpEventListener() {
+  // Set up event listener to capture player input
+  // Store the captured input in a player sequence array
+  // Call the compareSequences function
+}
 
-// what happened if userinput is incorrect (go to scorescreen)
+// Compare the player sequence with the computer sequence
+function compareSequences() {
+  // Loop over the computer sequence
+  // If the player index value matches the computer index value and gameStatus is true
+  // Update gameStatus to stay true
+  // Increase the currentScore
+  // Call checkHighScore()
+  // Otherwise, set gameStatus to false
+}
+
+// Check the score and high score
+function checkHighScore() {
+  // If the currentScore is greater than the highScore
+  // Set the highScore to the currentScore
+}
+
+// Handle correct or incorrect user input
+function handleUserInput() {
+  // If gameStatus is true
+  // Call addAndPlay to continue the game
+  // Otherwise, show the score screen
+}
+
+// Start the game by calling addAndPlay initially
+addAndPlay();
+
+// Setup event listener and validate user input against the generated sequences
+setUpEventListener();
