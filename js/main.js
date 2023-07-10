@@ -60,7 +60,7 @@ function shareTheFun() {
     }, 5000);
   }
 
-// screen visability logic
+////////////////////////////////////////////////////////////////// screen visability logic
 
 // Hide all other screens initially
 document.getElementById("countDownScreen").style.visibility = "hidden";
@@ -115,3 +115,17 @@ function startCounterAndShowGame() {
     runCountdown(i);
   }
 }
+
+////////////////////capturing and validating player input against the generated sequences.
+
+// define array to hold the computer sequence.
+
+// function to add random choise to the computer sequence and play whenever called
+
+// setup event listener to capture player input and store it
+
+// compair the player sequence with the computer sequence
+
+// what happened if userinput is correct (we will call addAndPlay)
+
+// what happened if userinput is incorrect (go to scorescreen)
