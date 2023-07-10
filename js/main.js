@@ -120,105 +120,75 @@ function startCounterAndShowGame() {
 
 }
 
-////////////////////capturing and validating player input against the generated sequences.
+//////////////////// Capturing and validating player input against the generated sequences.
 
-// Declare global variable gameStatus, initially set to true
 let gameStatus = true;
-
-// Declare global variable currentScore, initially set to 0
 let currentScore = 0;
-
-// Declare global array to hold the computer sequence
 let sequence = [];
-
-// Declare global array to hold the user input
 let userSeq = [];
 
-// Function to add a random choice to the computer sequence and play the full sequence
 function addAndPlay() {
-  // Generate a random choice
   const randomChoice = Math.floor(Math.random() * 4) + 1;
-  // Add it to the sequence
   sequence.push(randomChoice);
-  // Play the full sequence one time
   playSequence();
-  // Call the event listener to capture player input
   setUpEventListener();
 }
 
-// Function to play the full sequence
 function playSequence() {
   for (let i = 0; i < sequence.length; i++) {
     const quarterElement = document.getElementById(`quarter${sequence[i]}`);
-    // Flash the light or perform any desired action for the quarter
     setTimeout(() => {
       quarterElement.style.filter = "brightness(2.5)";
       setTimeout(() => {
-        quarterElement.style.filter = ""; // Reset the filter to its initial status
+        quarterElement.style.filter = "";
       }, 500);
-    }, 300);
+    }, 300 * (i + 1));
   }
 }
 
-
-// Setup event listener to capture player input and store it
 function setUpEventListener() {
   const quarters = document.getElementsByClassName("quarter");
-
-  // Set up event listener to capture player input
   for (let i = 0; i < quarters.length; i++) {
-    quarters[i].addEventListener("click", handleUserInput());
-    // Store the captured input in a player sequence array
-    userSeq.push(i + 1);
+    quarters[i].addEventListener("click", handleUserInput);
   }
-  // Store the captured input in a player sequence array
-  userSeq.push(i + 1);
-  // Call the compareSequences function
-  compareSequences();
 }
 
-// //Testing the function
-// // Setup event listener to capture player input and store it
-// function setUpEventListener() {
-//   const quarters = document.getElementsByClassName("quarter");
-
-//   // Set up event listener to capture player input
-//   for (let i = 0; i < quarters.length; i++) {
-//     quarters[i].addEventListener("click", () => {
-//       console.log("User clicked on quarter", i + 1);
-//     });
-//   }
-// }
-
-// // Call the setup event listener
-// setUpEventListener();
-
-
-// Compare the player sequence with the computer sequence
 function compareSequences() {
-  // Loop over the computer sequence
-  // If the player index value matches the computer index value and gameStatus is true
-    // Update gameStatus to stay true
-    // Increase the currentScore
-    // Call checkHighScore()
-    // Otherwise, set gameStatus to false
+  const lastIndex = userSeq.length - 1;
+  if (userSeq[lastIndex] === sequence[lastIndex]) {
+    currentScore++;
+    checkHighScore();
+    if (lastIndex === sequence.length - 1) {
+      // Player completed the sequence, add a new choice
+      setTimeout(() => {
+        userSeq = []; // Clear the user sequence
+        addAndPlay();
+      }, 1000); // Delay before adding the next choice
+    }
+  } else {
+    gameStatus = false;
+    // Game over, show the score screen or perform other actions
+    const scoreScreen = document.getElementById("scoreScreen");
+    scoreScreen.style.visibility = "visible";
+  }
 }
 
-// Check the score and high score
 function checkHighScore() {
-  // If the currentScore is greater than the highScore
-  // Set the highScore to the currentScore
+  const highScoreElement = document.getElementById("highScore");
+  const highScore = parseInt(highScoreElement.textContent);
+  if (currentScore > highScore) {
+    highScoreElement.textContent = currentScore;
+  }
 }
 
-// Handle correct or incorrect user input
-function handleUserInput() {
-  // If gameStatus is true
-  if (gameStatus){
-  // Call addAndPlay to continue the game
-  addAndPlay()
-  }else{
-  // set gameStatus to false
-  gameStatus = false;
-  // Otherwise, show the score screen
+function handleUserInput(event) {
+  if (gameStatus) {
+    const clickedQuarter = event.target;
+    const quarterIndex = parseInt(clickedQuarter.id.slice(-1));
+    userSeq.push(quarterIndex);
+    console.log("User input:", userSeq); // Added console log
+    compareSequences();
+  } else {
+    // Game over, show the score screen or perform other actions
   }
 }
