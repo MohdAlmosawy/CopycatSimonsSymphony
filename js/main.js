@@ -203,6 +203,9 @@ function handleUserInput(event) {
     userSeq.push(quarterIndex);
     console.log("User input:", userSeq); // Added console log
     compareSequences();
+    // Play audio for the clicked quarter
+    const audio = new Audio(`assets/Audio/sound${quarterIndex}.mp3`);
+    audio.play();
   } else {
     // Game over, show the score screen or perform other actions
   }
