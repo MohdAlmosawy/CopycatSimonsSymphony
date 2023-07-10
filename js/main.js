@@ -94,7 +94,7 @@ function startCounterAndShowGame() {
   audio.play();
 
   // Define the countdown numbers
-  const countDownArray = ['2', '1', 'Go'];
+  const countDownArray = ['3','2','1', 'Go'];
 
   // Define a separate function for the setTimeout logic
   function runCountdown(index) {
@@ -109,7 +109,7 @@ function startCounterAndShowGame() {
           // Start the game by calling addAndPlay initially
           addAndPlay();
       }
-    }, (index + 1) * 1000); // Delay between countdown numbers (1 second)
+    }, (index + 1) * 1000); // Delay between countdown numbers
   }
 
   // Iterate over the countDownArray
@@ -133,16 +133,17 @@ function addAndPlay() {
   playSequence();
   setUpEventListener();
 }
-
 function playSequence() {
   for (let i = 0; i < sequence.length; i++) {
     const quarterElement = document.getElementById(`quarter${sequence[i]}`);
     setTimeout(() => {
       quarterElement.style.filter = "brightness(2.5)";
+      const audio = new Audio(`assets/Audio/sound${sequence[i]}.mp3`);
+      audio.play();
       setTimeout(() => {
         quarterElement.style.filter = "";
       }, 500);
-    }, 300 * (i + 1));
+    }, 700 * (i + 1));
   }
 }
 
@@ -168,9 +169,23 @@ function compareSequences() {
   } else {
     gameStatus = false;
     // Game over, show the score screen or perform other actions
-    const scoreScreen = document.getElementById("scoreScreen");
-    scoreScreen.style.visibility = "visible";
+    showScoreScreen();
+    
   }
+}
+
+function showScoreScreen() {
+  // Show the score screen
+  const scoreScreen = document.getElementById("scoreScreen");
+  scoreScreen.style.visibility = "visible";
+  // Wait for 3 seconds before hiding the score screen and showing the scoreboard screen
+  setTimeout(() => {
+    // Hide the score screen
+    scoreScreen.style.visibility = "hidden";
+    // Show the scoreboard screen
+    const scoreboardScreen = document.getElementById("scoreboardScreen");
+    scoreboardScreen.style.visibility = "visible";
+  }, 3000);
 }
 
 function checkHighScore() {
@@ -192,3 +207,31 @@ function handleUserInput(event) {
     // Game over, show the score screen or perform other actions
   }
 }
+
+// Function to reset the game state
+function resetGame() {
+  // Reset the necessary variables
+  gameStatus = true;
+  currentScore = 0;
+  sequence = [];
+  userSeq = [];
+
+  // Reset any other game-related variables or states
+
+  // Hide the scoreboard screen
+  const scoreboardScreen = document.getElementById("scoreboardScreen");
+  scoreboardScreen.style.visibility = "hidden";
+
+  // Show the countdown screen
+  const countdownScreen = document.getElementById("countDownScreen");
+  countdownScreen.style.visibility = "visible";
+
+  // Call the startCounterAndShowGame() function to initiate the countdown and game start
+  startCounterAndShowGame();
+}
+
+// Get the "Try Again" button element
+const tryAgainButton = document.getElementById("tryAgain");
+
+// Add event listener for the click event
+tryAgainButton.addEventListener("click", resetGame);
