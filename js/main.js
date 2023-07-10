@@ -106,6 +106,8 @@ function startCounterAndShowGame() {
       // Hide the countDownScreen after the last countdown number
       if (index === countDownArray.length - 1) {
         countdownScreen.style.visibility = 'hidden';
+          // Start the game by calling addAndPlay initially
+          addAndPlay();
       }
     }, (index + 1) * 1000); // Delay between countdown numbers (1 second)
   }
@@ -114,6 +116,8 @@ function startCounterAndShowGame() {
   for (let i = 0; i < countDownArray.length; i++) {
     runCountdown(i);
   }
+
+
 }
 
 ////////////////////capturing and validating player input against the generated sequences.
@@ -129,10 +133,30 @@ let sequence = [];
 
 // Function to add a random choice to the computer sequence and play the full sequence
 function addAndPlay() {
-  // Generate a random choice and add it to the sequence
+  // Generate a random choice
+  const randomChoice = Math.floor(Math.random() * 4) + 1;
+  // Add it to the sequence
+  sequence.push(randomChoice);
   // Play the full sequence one time
+  playSequence();
   // Call the event listener to capture player input
+  setUpEventListener();
 }
+
+// Function to play the full sequence
+function playSequence() {
+  for (let i = 0; i < sequence.length; i++) {
+    const quarterElement = document.getElementById(`quarter${sequence[i]}`);
+    // Flash the light or perform any desired action for the quarter
+    setTimeout(() => {
+      quarterElement.style.filter = "brightness(2.5)";
+      setTimeout(() => {
+        quarterElement.style.filter = ""; // Reset the filter to its initial status
+      }, 500);
+    }, 300);
+  }
+}
+
 
 // Setup event listener to capture player input and store it
 function setUpEventListener() {
@@ -145,10 +169,10 @@ function setUpEventListener() {
 function compareSequences() {
   // Loop over the computer sequence
   // If the player index value matches the computer index value and gameStatus is true
-  // Update gameStatus to stay true
-  // Increase the currentScore
-  // Call checkHighScore()
-  // Otherwise, set gameStatus to false
+    // Update gameStatus to stay true
+    // Increase the currentScore
+    // Call checkHighScore()
+    // Otherwise, set gameStatus to false
 }
 
 // Check the score and high score
@@ -163,9 +187,6 @@ function handleUserInput() {
   // Call addAndPlay to continue the game
   // Otherwise, show the score screen
 }
-
-// Start the game by calling addAndPlay initially
-addAndPlay();
 
 // Setup event listener and validate user input against the generated sequences
 setUpEventListener();
