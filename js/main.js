@@ -189,12 +189,23 @@ function showScoreScreen() {
 }
 
 function checkHighScore() {
-  const highScoreElement = document.getElementById("highScore");
-  const highScore = parseInt(highScoreElement.textContent);
-  if (currentScore > highScore) {
-    highScoreElement.textContent = currentScore;
-  }
+  const currentScoreElements = document.getElementsByClassName("currentScore");
+  const highScoreElements = document.getElementsByClassName("highScore");
+  
+  // Update the currentScore elements
+  Array.from(currentScoreElements).forEach(element => {
+    element.textContent = currentScore;
+  });
+  
+  // Update the highScore elements if necessary
+  Array.from(highScoreElements).forEach(element => {
+    const highScore = parseInt(element.textContent);
+    if (currentScore > highScore) {
+      element.textContent = currentScore;
+    }
+  });
 }
+
 
 function handleUserInput(event) {
   if (gameStatus) {
