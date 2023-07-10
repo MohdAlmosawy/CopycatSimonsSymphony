@@ -168,6 +168,8 @@ function setUpEventListener() {
   // Set up event listener to capture player input
   for (let i = 0; i < quarters.length; i++) {
     quarters[i].addEventListener("click", handleUserInput());
+    // Store the captured input in a player sequence array
+    userSeq.push(i + 1);
   }
   // Store the captured input in a player sequence array
   userSeq.push(i + 1);
