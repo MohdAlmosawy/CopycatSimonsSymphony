@@ -254,7 +254,11 @@ function resetGame() {
   currentScore = 0;
   sequence = [];
   userSeq = [];
-
+  // Reset the "Current Score" container
+  const currentScoreElements = document.querySelectorAll(".currentScore");
+  currentScoreElements.forEach(element => {
+    element.textContent = "0";
+  });
   // Hide the scoreboard screen
   const scoreboardScreen = document.getElementById("scoreboardScreen");
   scoreboardScreen.style.visibility = "hidden";
