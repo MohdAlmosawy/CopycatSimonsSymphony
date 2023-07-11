@@ -1,192 +1,190 @@
 /* Global Styling */
 
 body {
-    background-color: #1b1a1a;
-    font-family: "Bungee", sans-serif;
-    color: #fff;
-    overflow-x: hidden;
-  }
-  
+  background-color: #1b1a1a;
+  font-family: "Bungee", sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+}
+
 a {
-    color: #fff;
+  color: #fff;
 }
 .noDecoration {
-    text-decoration: none;
-  }
+  text-decoration: none;
+}
 
-  .red {
-    background-color: rgb(255, 65, 54);
-  }
-  
-  .blue {
-    background-color: rgb(0, 116, 217);
-  }
-  
-  .green {
-    background-color: rgb(46, 204, 64);
-  }
-  
-  .yellow {
-    background-color: rgb(255, 220, 0);
-  }
+.red {
+  background-color: rgb(255, 65, 54);
+}
 
-  .Screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-  }
+.blue {
+  background-color: rgb(0, 116, 217);
+}
 
-  .overlayBG {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, .8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 0;
-  }
+.green {
+  background-color: rgb(46, 204, 64);
+}
+
+.yellow {
+  background-color: rgb(255, 220, 0);
+}
+
+.Screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.overlayBG {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
 
 /* Header Styling  */
 
-.headerContainer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: larger;
-    margin-top: 1%;
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: larger;
+  margin-top: 1%;
 }
-.logoDiv{
-    margin-left: 2%;
+.logoDiv {
+  margin-left: 2%;
 }
 
 /* MainMenu Styling */
 
 .mainMenuContent {
-    display: block;
-    text-align: center;
-    margin-top: 50vh;
-    transform: translateY(-50%);
+  display: block;
+  text-align: center;
+  margin-top: 50vh;
+  transform: translateY(-50%);
 }
 
 #gameName,
 h2 {
-    text-align: center; 
+  text-align: center;
 }
 
 /* GamePlay Styling */
 
 .circle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 55vh;
-    height: 55vh;
-    border-radius: 50%;
-    overflow: hidden;
-  }
-  
-  .topHalfCircle {
-    width: 100%;
-    height: 50%;
-  }
-  .bottomHalfCircle {
-    top: 50%;
-    width: 100%;
-    height: 50%;
-  }
-  
-  .quarter {
-    width: 50%;
-    height: 100%;
-    float: left;
-    transition: background-color 0.2s ease;
-  }
-  
-  .quarter.user-turn:hover {
-    filter: contrast(2);
-    
-  }
-  
-  .scoreCircle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 14vh;
-    height: 14vh;
-    border-radius: 50%;
-    background-color: #1b1a1a;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 15px;
-  }
-  
-  .score {
-    font-size: 24px;
-  }
-  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 55vh;
+  height: 55vh;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.topHalfCircle {
+  width: 100%;
+  height: 50%;
+}
+.bottomHalfCircle {
+  top: 50%;
+  width: 100%;
+  height: 50%;
+}
+
+.quarter {
+  width: 50%;
+  height: 100%;
+  float: left;
+  transition: background-color 0.2s ease;
+}
+
+.quarter.user-turn:hover {
+  filter: contrast(2);
+}
+
+.scoreCircle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 14vh;
+  height: 14vh;
+  border-radius: 50%;
+  background-color: #1b1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 15px;
+}
+
+.score {
+  font-size: 24px;
+}
+
 /* scoreScreen styling */
 
-  .scoreContainer {
-    text-align: center;
-    color: white;
-  }
-  
-  .currentScore,
-  .highScore {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .currentScore span,
-  .highScore span {
-    font-weight: bold;
-  }
+.scoreContainer {
+  text-align: center;
+  color: white;
+}
 
-  /* scoreboard styling */
+.currentScore,
+.highScore {
+  font-size: 24px;
+  /* margin-bottom: 10px; */
+}
 
-  .buttons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
-    /* i want to make them cetered */
-  }
+.currentScore span,
+.highScore span {
+  font-weight: bold;
+}
 
-  /* countDown styles */
-  
-  .countdown {
-    font-size: 10vh;
-  }
-  .countDownScreen{
-    z-index: 999;
-  }
- 
-  /* Sharing the game */
+/* scoreboard styling */
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  /* i want to make them cetered */
+}
+
+/* countDown styles */
+
+.countdown {
+  font-size: 10vh;
+}
+.countDownScreen {
+  z-index: 999;
+}
+
+/* Sharing the game */
 
 .notification-container {
-   
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 9999;
 }
 
 /* player score board name */
 
 .playerName {
-    font-size: 20px;
-  }
-  .list_item_style {
-    opacity: 0.5;
-  }
+  font-size: 20px;
+}
+.list_item_style {
+  opacity: 0.5;
+}
