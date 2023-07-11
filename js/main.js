@@ -145,12 +145,16 @@ function addAndPlay() {
 
 function playSequence() {
   userTurn = false;
+  document.querySelectorAll('.quarter').forEach(quarter => {
+    quarter.classList.remove('user-turn');
+  });
   console.log("playSequence started and user turn: " + userTurn);
   myTimer = 0; // Reset the timer for each sequence playback
+
   for (let i = 0; i < sequence.length; i++) {
     const quarterElement = document.getElementById(`quarter${sequence[i]}`);
     setTimeout(() => {
-      quarterElement.style.filter = "brightness(2.5)";
+      quarterElement.style.filter = "contrast(2.5)";
       const audio = new Audio(`assets/Audio/sound${sequence[i]}.mp3`);
       audio.play();
       setTimeout(() => {
@@ -162,6 +166,9 @@ function playSequence() {
   setTimeout(() => {
     userTurn = true;
     console.log("playSequence ended and user turn: " + userTurn);
+    document.querySelectorAll('.quarter').forEach(quarter => {
+      quarter.classList.add('user-turn');
+    });
     setUpEventListener();
   }, myTimer + 700); // Delay before enabling user input
 }

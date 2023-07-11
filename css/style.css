@@ -105,9 +105,10 @@ h2 {
     float: left;
     transition: background-color 0.2s ease;
   }
-
-  .quarter:hover {
-    filter: brightness(1.5);
+  
+  .quarter.user-turn:hover {
+    filter: contrast(2);
+    
   }
   
   .scoreCircle {
