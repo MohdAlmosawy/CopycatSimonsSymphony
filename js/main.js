@@ -217,8 +217,6 @@ function handleUserInput(event) {
     // Play audio for the clicked quarter
     const audio = new Audio(`assets/Audio/sound${quarterIndex}.mp3`);
     audio.play();
-  } else {
-    // Game over, show the score screen or perform other actions
   }
 }
 
@@ -229,8 +227,6 @@ function resetGame() {
   currentScore = 0;
   sequence = [];
   userSeq = [];
-
-  // Reset any other game-related variables or states
 
   // Hide the scoreboard screen
   const scoreboardScreen = document.getElementById("scoreboardScreen");
