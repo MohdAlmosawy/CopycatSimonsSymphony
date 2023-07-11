@@ -134,7 +134,7 @@ let currentScore = 0;
 let sequence = [];
 let userSeq = [];
 let userTurn = false;
-console.log("initial status user turn: " + userTurn);
+// console.log("initial status user turn: " + userTurn);
 let myTimer = 0;
 
 function addAndPlay() {
@@ -145,10 +145,10 @@ function addAndPlay() {
 
 function playSequence() {
   userTurn = false;
-  document.querySelectorAll('.quarter').forEach(quarter => {
-    quarter.classList.remove('user-turn');
+  document.querySelectorAll(".quarter").forEach((quarter) => {
+    quarter.classList.remove("user-turn");
   });
-  console.log("playSequence started and user turn: " + userTurn);
+  // console.log("playSequence started and user turn: " + userTurn);
   myTimer = 0; // Reset the timer for each sequence playback
 
   for (let i = 0; i < sequence.length; i++) {
@@ -165,9 +165,9 @@ function playSequence() {
   }
   setTimeout(() => {
     userTurn = true;
-    console.log("playSequence ended and user turn: " + userTurn);
-    document.querySelectorAll('.quarter').forEach(quarter => {
-      quarter.classList.add('user-turn');
+    // console.log("playSequence ended and user turn: " + userTurn);
+    document.querySelectorAll(".quarter").forEach((quarter) => {
+      quarter.classList.add("user-turn");
     });
     setUpEventListener();
   }, myTimer + 700); // Delay before enabling user input
@@ -185,14 +185,14 @@ function handleUserInput(event) {
     const clickedQuarter = event.target;
     const quarterIndex = +clickedQuarter.id.slice(-1); // Using unary plus operator for conversion
     userSeq.push(quarterIndex);
-    console.log("User input:", userSeq); // Added console log
+    // console.log("User input:", userSeq); // Added console log
     compareSequences();
     // Play audio for the clicked quarter
     const audio = new Audio(`assets/Audio/sound${quarterIndex}.mp3`);
     audio.play();
   } else {
     // Ignore user input when it's not their turn
-    console.log("Not the user's turn");
+    // console.log("Not the user's turn");
   }
 }
 
@@ -256,7 +256,7 @@ function resetGame() {
   userSeq = [];
   // Reset the "Current Score" container
   const currentScoreElements = document.querySelectorAll(".currentScore");
-  currentScoreElements.forEach(element => {
+  currentScoreElements.forEach((element) => {
     element.textContent = "0";
   });
   // Hide the scoreboard screen
