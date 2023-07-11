@@ -162,7 +162,7 @@ h2 {
   /* countDown styles */
   
   .countdown {
-    font-size: 30vh;
+    font-size: 10vh;
   }
   .countDownScreen{
     z-index: 999;
