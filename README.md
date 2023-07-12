@@ -26,7 +26,7 @@ Copycat Simon's Symphony is a digital game inspired by the classic Simon Says ga
   - [Data Structures](#data-structures)
   - [Code Organization](#code-organization)
   - [Important Modules or Components](#important-modules-or-components)
-- [Agile Scrum Documentation](#agile-scrum-documentation)
+- [Project Documentation](#project-documentation)
   - [Project Brief Document](#project-brief-document)
   - [Sprints Key Aspects, Goals, and Tasks](#sprints-key-aspects-goals-and-tasks)
   - [Wireframes](#wireframes)
@@ -136,6 +136,12 @@ This will allow you to play another round within the same session.
 
 ## Developer Guide
 
+  - [Architecture](#architecture)
+  - [Design Principles](#design-principles)
+  - [Key Algorithms](#key-algorithms)
+  - [Data Structures](#data-structures)
+  - [Code Organization](#code-organization)
+  - [Important Modules or Components](#important-modules-or-components)
 ### Architecture
 
 Copycat Simon's Symphony is a client-side web application built using HTML, CSS, and JavaScript. It follows a single-page application (SPA) architecture, where different sections of the game are dynamically shown or hidden based on user interactions.
@@ -204,9 +210,13 @@ These are the key aspects of the architecture, design principles, algorithms, da
 [TOP](#table-of-contents)
 
 
-## Agile Scrum Documentation
+## Project Documentation
 
 The development process for Copycat Simon's Symphony followed the Agile Scrum methodology. The following documents were created during the planning process:
+
+  - [Project Brief Document](#project-brief-document)
+  - [Sprints Key Aspects, Goals, and Tasks](#sprints-key-aspects-goals-and-tasks)
+  - [Wireframes](#wireframes)
 
  ### Project Brief Document :
 Provides an overview of the project, objectives, timeframe, user stories, and minimum viable product (MVP).
@@ -230,6 +240,11 @@ Outlines the project goals and specific objectives for each sprin, main aspects 
 [TOP](#table-of-contents)
 
 ## Testing Documentation
+
+  - [Testing Objectives](#testing-objectives)
+  - [Test Plan](#test-plan)
+  - [Defect Reports](#defect-reports)
+  - [Test Summary Report](#test-summary-report)
 
 A comprehensive testing process was followed to ensure the functionality, usability, compatibility, and performance of the game. The testing documentation includes:
 
