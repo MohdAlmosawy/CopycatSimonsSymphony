@@ -144,6 +144,7 @@ function addAndPlay() {
 }
 
 function playSequence() {
+  
   userTurn = false;
   document.querySelectorAll(".quarter").forEach((quarter) => {
     quarter.classList.remove("user-turn");
