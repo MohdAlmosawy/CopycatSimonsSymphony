@@ -160,7 +160,7 @@ Outlines the project goals and specific objectives for each sprin, main aspects 
 
 ### Wireframes:
  Visual representations of the game's interface and flow.
-![app Wireframes](Documentation\wireframes.png)
+![app Wireframes](Documentation/wireframes.png)
 
 ## Testing Documentation
 
