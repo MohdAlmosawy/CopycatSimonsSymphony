@@ -54,6 +54,20 @@ Note: The game requires an internet connection to load external dependencies and
 
 The User Manual section provides detailed instructions on how to play Copycat Simon's Symphony. Follow the steps below to enjoy the game:
 
+  - [1. Copycat Simon's Symphony](#1-copycat-simons-symphony)
+  - [2. Starting the Game](#2-starting-the-game)
+  - [3. Countdown](#3-countdown)
+  - [4. Watch and Remember!](#4-watch-and-remember)
+  - [5. Repeat the Beat!](#5-repeat-the-beat)
+  - [6. Current Round Score](#6-current-round-score)
+  - [7. Highest Session Score](#7-highest-session-score)
+  - [8. Scores Screen](#8-scores-screen)
+  - [9. Congratulations Maestro](#9-congratulations-maestro)
+  - [10. Copycat Hall of Fame](#10-copycat-hall-of-fame)
+  - [11. Share the Fun](#11-share-the-fun)
+  - [12. Share Alert](#12-share-alert)
+  - [13. Try Again Button](#13-try-again-button)
+
 ### 1. Copycat Simon's Symphony
 Once you open the game, you will be directed to the main menu.
 ![Step 1 screenshot](https://images.tango.us/workflows/45370b34-64d4-4445-8a97-973c7788a5b2/steps/dee0ad96-e0db-4628-bcad-0690856c5297/bb3638c9-ca91-47cc-ac63-c43492fd329b.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&border=2%2CF4F2F7&border-radius=8%2C8%2C8%2C8&border-radius-inner=8%2C8%2C8%2C8&blend-align=bottom&blend-mode=normal&blend-x=0&blend-w=1200&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&mark-x=558&mark-y=552&m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTQlMkNGRjc0NDImdz04NSZoPTUwJmZpdD1jcm9wJmNvcm5lci1yYWRpdXM9MTA%3D)
