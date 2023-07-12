@@ -85,7 +85,60 @@ This will allow you to play another round within the same session.
 
 ## Developer Guide
 
-If you are an IT professional or developer interested in understanding the logic and code behind the game, please refer to the [Developer Guide](developer-guide.md). The developer guide covers the architecture, design principles, key algorithms, data structures, code organization, and important modules or components used in the game.
+### Architecture
+
+Copycat Simon's Symphony is a client-side web application built using HTML, CSS, and JavaScript. It follows a single-page application (SPA) architecture, where different sections of the game are dynamically shown or hidden based on user interactions.
+
+### Design Principles
+
+The following design principles were followed during the development of Copycat Simon's Symphony:
+
+1. **Modularity**: The code is organized into separate modules and components, each responsible for a specific functionality or feature of the game. This promotes code reusability and maintainability.
+
+2. **Separation of Concerns**: The HTML, CSS, and JavaScript code are kept separate, following the best practices of front-end development. This allows for easier management and understanding of each layer.
+
+### Key Algorithms
+
+Copycat Simon's Symphony utilizes the following key algorithms:
+
+1. **Random Sequence Generation**: When the game starts, a random sequence of button presses is generated. This algorithm ensures that each sequence is unique and provides a challenging experience for the player.
+
+### Data Structures
+
+The game utilizes the following data structures:
+
+1. **Arrays**: The `sequence` array stores the randomly generated sequence of button presses. The `userSeq` array keeps track of the user's input sequence.
+
+### Code Organization
+
+The codebase is organized as follows:
+
+- **index.html**: This is the main HTML file that contains the structure of the game's user interface. It includes links to external CSS and JavaScript files and defines the different screens and components of the game.
+
+- **main.js**: This JavaScript file contains the logic for handling user interactions, generating random sequences, checking user input, and managing game state. It also includes functions for displaying screens, playing sounds, and handling form submissions.
+
+- **style.css**: This CSS file defines the styles and layout of the game's user interface. It includes global styling, header styling, main menu styling, game play styling, score screen styling, scoreboard styling, and other relevant styles.
+
+### Important Modules or Components
+
+The following are important modules or components used in Copycat Simon's Symphony:
+
+- **Header**: The header component contains the game's logo and high score display.
+
+- **Main Menu**: The main menu component is responsible for displaying the game's title and a "Play" button. It handles the transition to the game play screen when the button is clicked.
+
+- **Countdown Screen**: The countdown screen component displays a countdown animation before the game starts. It provides a visual cue to the player and creates anticipation.
+
+- **Game Play Screen**: The game play screen component displays the circular buttons representing different colors. It manages the playback of the sequence and captures user input.
+
+- **Score Screen**: The score screen component shows the current score and high score achieved by the player during the game. It appears after the player's turn ends.
+
+- **Congratulations Screen**: The congratulations screen component appears when the player achieves a high score and allows them to enter their username for the leaderboard.
+
+- **Scoreboard Screen**: The scoreboard screen component displays the top scores achieved by different players. It provides a leaderboard view and options to try the game again or share it.
+
+These are the key aspects of the architecture, design principles, algorithms, data structures, code organization, and important modules or components used in Copycat Simon's Symphony. Understanding these will help you navigate and enhance the game's codebase effectively.
+
 
 ## Agile Scrum Documentation
 
