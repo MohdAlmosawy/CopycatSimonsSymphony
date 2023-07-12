@@ -301,7 +301,7 @@ function handleFormSubmit(e) {
   localStorage.setItem("topScores", JSON.stringify(topScores));
   console.log(JSON.stringify(topScores));
   updateScoreboard(topScores);
-  showScoreScreen();
+  showScoreboardScreen();
 }
 
 function updateScoreboard(topScores) {
