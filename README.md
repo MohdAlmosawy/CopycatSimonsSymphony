@@ -168,29 +168,34 @@ A comprehensive testing process was followed to ensure the functionality, usabil
 
 ### Testing Objectives: 
 Specifies the objectives and goals of the testing phase.
-![Testing Objectives](Documentation/Testing Documents/Testing Objectives_page-0001.jpg)
+![Testing Objectives](Documentation/TestingDocuments/TestingObjectives_page-0001.jpg)
 
 ### Test Plan:
  Outlines the testing approach, methodologies, and test cases executed.
 
+ ![Test Plan](Documentation/TestingDocuments/TestPlan_page-0001.jpg)
+ ![Test Plan](Documentation/TestingDocuments/TestPlan_page-0002.jpg)
+ ![Test Plan](Documentation/TestingDocuments/TestPlan_page-0003.jpg)
+
 ### Defect Reports: 
 Describes the identified defects, including their severity, priority, and recommendations for resolution.
+ ![Defect Report](Documentation/TestingDocuments/DefectReport_page-0001.jpg)
+ ![Defect Report](Documentation/TestingDocuments/DefectReport_page-0002.jpg)
+ ![Defect Report](Documentation/TestingDocuments/DefectReport_page-0003.jpg)
+ ![Defect Report](Documentation/TestingDocuments/DefectReport_page-0004.jpg)
+ ![Defect Report](Documentation/TestingDocuments/DefectReport_page-0005.jpg)
+ ![Defect Report](Documentation/TestingDocuments/DefectReport_page-0006.jpg)
 
 ### Test Summary Report: 
 Provides an overview of the testing efforts, results, and recommendations.
 
-
-## Contributing
-
-If you would like to contribute to the development of Copycat Simon's Symphony, please follow the guidelines outlined in the [CONTRIBUTING.md](CONTRIBUTING.md) file.
+ ![Test Summary Report](Documentation/TestingDocuments/TestSummaryReport_page-0001.jpg)
+ ![Test Summary Report](Documentation/TestingDocuments/TestSummaryReport_page-0002.jpg)
+ ![Test Summary Report](Documentation/TestingDocuments/TestSummaryReport_page-0003.jpg)
 
 ## License
 
 The game is licensed under the [MIT License](LICENSE.md).
-
-## Acknowledgments
-
-We would like to acknowledge the support and guidance provided by the project team, instructors, and fellow contributors throughout the development process.
 
 ## Contact
 
