@@ -147,36 +147,38 @@ These are the key aspects of the architecture, design principles, algorithms, da
 
 The development process for Copycat Simon's Symphony followed the Agile Scrum methodology. The following documents were created during the planning process:
 
-- ### Project Brief Document :
+ ### Project Brief Document :
 Provides an overview of the project, objectives, timeframe, user stories, and minimum viable product (MVP).
 ![Project Breif](Documentation/Breif_page-0001.jpg)
 
- ### Goals
-Outlines the project goals and specific objectives for each sprint.
-![Project Breif](Documentation\Goals,Sprints key aspects, and Sprints tasks_page-0001.jpg)
-![Project Breif](Documentation/GoalsSprintsKeyAspectsAndSprintsTasks_page-0001.jpg)
-![Project Breif](Documentation/GoalsSprintsKeyAspectsAndSprintsTasks_page-0002.jpg)
-![Project Breif](Documentation/GoalsSprintsKeyAspectsAndSprintsTasks_page-0003.jpg)
-![Project Breif](Documentation\GoalsSprintsKeyAspectsAndSprintsTasks_page-0004.jpg)
+ ### Sprints Key Aspects, Goals, and Tasks :
+Outlines the project goals and specific objectives for each sprin, main aspects and tasks for each sprint, and the tasks assigned to each sprint.
+![Project Key Aspects, Goals, and Tasks ](Documentation/GoalsSprintsKeyAspectsAndSprintsTasks_page-0001.jpg)
+![Project Key Aspects, Goals, and Tasks](Documentation/GoalsSprintsKeyAspectsAndSprintsTasks_page-0002.jpg)
+![Project Key Aspects, Goals, and Tasks](Documentation/GoalsSprintsKeyAspectsAndSprintsTasks_page-0003.jpg)
+![Project Key Aspects, Goals, and Tasks](Documentation/GoalsSprintsKeyAspectsAndSprintsTasks_page-0004.jpg)
 
-### Sprints Key Aspects
- Describes the main aspects and tasks for each sprint.
-
-### Sprints Tasks:
- Lists the tasks assigned to each sprint.
 ### Wireframes:
  Visual representations of the game's interface and flow.
+![app Wireframes](Documentation\wireframes.png)
 
 ## Testing Documentation
 
 A comprehensive testing process was followed to ensure the functionality, usability, compatibility, and performance of the game. The testing documentation includes:
 
-- Testing Objectives: Specifies the objectives and goals of the testing phase.
-- Test Plan: Outlines the testing approach, methodologies, and test cases executed.
-- Defect Reports: Describes the identified defects, including their severity, priority, and recommendations for resolution.
-- Test Summary Report: Provides an overview of the testing efforts, results, and recommendations.
+### Testing Objectives: 
+Specifies the objectives and goals of the testing phase.
+![Testing Objectives](Documentation/Testing Documents/Testing Objectives_page-0001.jpg)
 
-Please refer to the respective testing documents for detailed information on the testing process and outcomes.
+### Test Plan:
+ Outlines the testing approach, methodologies, and test cases executed.
+
+### Defect Reports: 
+Describes the identified defects, including their severity, priority, and recommendations for resolution.
+
+### Test Summary Report: 
+Provides an overview of the testing efforts, results, and recommendations.
+
 
 ## Contributing
 
