@@ -99,15 +99,18 @@ The following design principles were followed during the development of Copycat 
 
 ### Key Algorithms
 
-Copycat Simon's Symphony utilizes the following key algorithms:
+1. **Coloring the Game Title**: The coloring algorithm is responsible for dynamically styling the game title in the main menu. It applies different colors to each letter of the game title, creating an eye-catching visual effect.
 
-1. **Random Sequence Generation**: When the game starts, a random sequence of button presses is generated. This algorithm ensures that each sequence is unique and provides a challenging experience for the player.
+2. **Playback Sequence**: The playback sequence algorithm visually and audibly plays back the generated sequence of button presses to the player. It utilizes timeouts to create delays between each button press, ensuring a clear and understandable pattern for the player to follow.
+
+3. **User Input Validation**: The user input validation algorithm checks whether the user's input matches the generated sequence. It compares the user's input with the corresponding elements in the sequence array, ensuring accuracy and detecting any mistakes made by the player.
 
 ### Data Structures
 
-The game utilizes the following data structures:
+1. **Game State**: The game state data structure keeps track of important information about the current state of the game, such as whether it is the player's turn, the current score, and the generated sequence. It allows for efficient management and manipulation of game-related data.
 
-1. **Arrays**: The `sequence` array stores the randomly generated sequence of button presses. The `userSeq` array keeps track of the user's input sequence.
+2. **Leaderboard**: The leaderboard data structure stores the top scores achieved by different players. It typically consists of an array of objects, where each object represents a player's username and score. The leaderboard is updated whenever a player achieves a high score and enters their username.
+
 
 ### Code Organization
 
