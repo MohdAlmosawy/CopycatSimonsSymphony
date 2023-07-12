@@ -219,7 +219,9 @@ function showScoreScreen() {
   // Show the score screen
   const scoreScreen = document.getElementById("scoreScreen");
   scoreScreen.style.visibility = "visible";
-  showScoreboardScreen();
+  setTimeout(() => {
+    showScoreboardScreen();
+  }, 3000);
 }
 
 // Wait for 3 seconds before hiding the score screen and showing the scoreboard screen
@@ -229,8 +231,6 @@ function showScoreboardScreen(){
   const congratulationsScreen = document.getElementById("congratulationsScreen");
   congratulationsScreen.style.visibility = "hidden";
   
-
-  setTimeout(() => {
     // Hide the score screen
     const scoreScreen = document.getElementById("scoreScreen");
     scoreScreen.style.visibility = "hidden";
@@ -238,7 +238,7 @@ function showScoreboardScreen(){
     // Show the scoreboard screen
     const scoreboardScreen = document.getElementById("scoreboardScreen");
     scoreboardScreen.style.visibility = "visible";
-  }, 3000);
+
 }
 
 function checkHighScore() {
