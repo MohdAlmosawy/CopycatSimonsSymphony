@@ -153,6 +153,11 @@ Provides an overview of the project, objectives, timeframe, user stories, and mi
 
  ### Goals
 Outlines the project goals and specific objectives for each sprint.
+![Project Breif](Documentation\Goals,Sprints key aspects, and Sprints tasks_page-0001.jpg)
+![Project Breif](Documentation/GoalsSprintsKeyAspectsAndSprintsTasks_page-0001.jpg)
+![Project Breif](Documentation/GoalsSprintsKeyAspectsAndSprintsTasks_page-0002.jpg)
+![Project Breif](Documentation/GoalsSprintsKeyAspectsAndSprintsTasks_page-0003.jpg)
+![Project Breif](Documentation\GoalsSprintsKeyAspectsAndSprintsTasks_page-0004.jpg)
 
 ### Sprints Key Aspects
  Describes the main aspects and tasks for each sprint.
