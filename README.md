@@ -1,6 +1,3 @@
-<a href="#top" style="position: fixed; bottom: 20px; left: 20px; padding: 10px; background-color: #333; color: #fff; text-decoration: none; z-index: 9999;">Back to Top</a>
-
-# CopycatSimonsSymphony
 # Copycat Simon's Symphony
 **Repeat the Beat, Master the Treat!**
 
@@ -50,6 +47,8 @@ To install and set up the game, follow these steps:
 3. Open the `index.html` file in a web browser.
 
 Note: The game requires an internet connection to load external dependencies and resources.
+
+[TOP](#table-of-contents)
 
 ## User Manual
 
@@ -119,6 +118,8 @@ This alert will notify you that the message has been copied to your clipboard.
 This will allow you to play another round within the same session.
 ![Step 13 screenshot](https://images.tango.us/workflows/45370b34-64d4-4445-8a97-973c7788a5b2/steps/668e0f17-9eb1-4390-aad2-f7983b2e636b/327ec766-e328-494d-b1a2-911463169316.png?crop=focalpoint&fit=crop&fp-x=0.4254&fp-y=0.6966&fp-z=2.4122&w=1200&border=2%2CF4F2F7&border-radius=8%2C8%2C8%2C8&border-radius-inner=8%2C8%2C8%2C8&blend-align=bottom&blend-mode=normal&blend-x=0&blend-w=1200&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&mark-x=434&mark-y=377&m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTYlMkNGRjc0NDImdz0zMzImaD0xMjEmZml0PWNyb3AmY29ybmVyLXJhZGl1cz0xMA%3D%3D)
 
+[TOP](#table-of-contents)
+
 ## Developer Guide
 
 ### Architecture
@@ -133,6 +134,8 @@ The following design principles were followed during the development of Copycat 
 
 2. **Separation of Concerns**: The HTML, CSS, and JavaScript code are kept separate, following the best practices of front-end development. This allows for easier management and understanding of each layer.
 
+[TOP](#table-of-contents)
+
 ### Key Algorithms
 
 1. **Coloring the Game Title**: The coloring algorithm is responsible for dynamically styling the game title in the main menu. It applies different colors to each letter of the game title, creating an eye-catching visual effect.
@@ -141,11 +144,15 @@ The following design principles were followed during the development of Copycat 
 
 3. **User Input Validation**: The user input validation algorithm checks whether the user's input matches the generated sequence. It compares the user's input with the corresponding elements in the sequence array, ensuring accuracy and detecting any mistakes made by the player.
 
+[TOP](#table-of-contents)
+
 ### Data Structures
 
 1. **Game State**: The game state data structure keeps track of important information about the current state of the game, such as whether it is the player's turn, the current score, and the generated sequence. It allows for efficient management and manipulation of game-related data.
 
 2. **Leaderboard**: The leaderboard data structure stores the top scores achieved by different players. It typically consists of an array of objects, where each object represents a player's username and score. The leaderboard is updated whenever a player achieves a high score and enters their username.
+
+[TOP](#table-of-contents)
 
 
 ### Code Organization
@@ -157,6 +164,8 @@ The codebase is organized as follows:
 - **main.js**: This JavaScript file contains the logic for handling user interactions, generating random sequences, checking user input, and managing game state. It also includes functions for displaying screens, playing sounds, and handling form submissions.
 
 - **style.css**: This CSS file defines the styles and layout of the game's user interface. It includes global styling, header styling, main menu styling, game play styling, score screen styling, scoreboard styling, and other relevant styles.
+
+[TOP](#table-of-contents)
 
 ### Important Modules or Components
 
@@ -178,6 +187,8 @@ The following are important modules or components used in Copycat Simon's Sympho
 
 These are the key aspects of the architecture, design principles, algorithms, data structures, code organization, and important modules or components used in Copycat Simon's Symphony. Understanding these will help you navigate and enhance the game's codebase effectively.
 
+[TOP](#table-of-contents)
+
 
 ## Agile Scrum Documentation
 
@@ -187,6 +198,8 @@ The development process for Copycat Simon's Symphony followed the Agile Scrum me
 Provides an overview of the project, objectives, timeframe, user stories, and minimum viable product (MVP).
 ![Project Breif](Documentation/Breif_page-0001.jpg)
 
+[TOP](#table-of-contents)
+
  ### Sprints Key Aspects, Goals, and Tasks :
 Outlines the project goals and specific objectives for each sprin, main aspects and tasks for each sprint, and the tasks assigned to each sprint.
 ![Project Key Aspects, Goals, and Tasks ](Documentation/GoalsSprintsKeyAspectsAndSprintsTasks_page-0001.jpg)
@@ -194,9 +207,13 @@ Outlines the project goals and specific objectives for each sprin, main aspects 
 ![Project Key Aspects, Goals, and Tasks](Documentation/GoalsSprintsKeyAspectsAndSprintsTasks_page-0003.jpg)
 ![Project Key Aspects, Goals, and Tasks](Documentation/GoalsSprintsKeyAspectsAndSprintsTasks_page-0004.jpg)
 
+[TOP](#table-of-contents)
+
 ### Wireframes:
  Visual representations of the game's interface and flow.
 ![app Wireframes](Documentation/wireframes.png)
+
+[TOP](#table-of-contents)
 
 ## Testing Documentation
 
@@ -206,12 +223,16 @@ A comprehensive testing process was followed to ensure the functionality, usabil
 Specifies the objectives and goals of the testing phase.
 ![Testing Objectives](Documentation/TestingDocuments/TestingObjectives_page-0001.jpg)
 
+[TOP](#table-of-contents)
+
 ### Test Plan:
  Outlines the testing approach, methodologies, and test cases executed.
 
  ![Test Plan](Documentation/TestingDocuments/TestPlan_page-0001.jpg)
  ![Test Plan](Documentation/TestingDocuments/TestPlan_page-0002.jpg)
  ![Test Plan](Documentation/TestingDocuments/TestPlan_page-0003.jpg)
+
+ [TOP](#table-of-contents)
 
 ### Defect Reports: 
 Describes the identified defects, including their severity, priority, and recommendations for resolution.
@@ -222,12 +243,16 @@ Describes the identified defects, including their severity, priority, and recomm
  ![Defect Report](Documentation/TestingDocuments/DefectReport_page-0005.jpg)
  ![Defect Report](Documentation/TestingDocuments/DefectReport_page-0006.jpg)
 
+ [TOP](#table-of-contents)
+
 ### Test Summary Report: 
 Provides an overview of the testing efforts, results, and recommendations.
 
  ![Test Summary Report](Documentation/TestingDocuments/TestSummaryReport_page-0001.jpg)
  ![Test Summary Report](Documentation/TestingDocuments/TestSummaryReport_page-0002.jpg)
  ![Test Summary Report](Documentation/TestingDocuments/TestSummaryReport_page-0003.jpg)
+
+ [TOP](#table-of-contents)
 
 ## License
 
@@ -237,4 +262,4 @@ The game is licensed under the [MIT License](LICENSE.md).
 
 If you have any questions, feedback, or inquiries, please contact us at mohd.s.aqeel@gmail.com
 
-<a href="#top">click to go to top</a>
+[TOP](#table-of-contents)
