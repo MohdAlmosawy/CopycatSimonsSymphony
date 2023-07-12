@@ -145,15 +145,22 @@ These are the key aspects of the architecture, design principles, algorithms, da
 
 ## Agile Scrum Documentation
 
-The development process for Copycat Simon's Symphony followed the Agile Scrum methodology. The following documents were created during the development process:
+The development process for Copycat Simon's Symphony followed the Agile Scrum methodology. The following documents were created during the planning process:
 
-- ### Brief Document :
+- ### Project Brief Document :
 Provides an overview of the project, objectives, timeframe, user stories, and minimum viable product (MVP).
+![Project Breif](Documentation/Breif_page-0001.jpg)
 
-- Goals: Outlines the project goals and specific objectives for each sprint.
-- Sprints Key Aspects: Describes the main aspects and tasks for each sprint.
-- Sprints Tasks: Lists the tasks assigned to each sprint.
-- Wireframes: Visual representations of the game's interface and flow.
+ ### Goals
+Outlines the project goals and specific objectives for each sprint.
+
+### Sprints Key Aspects
+ Describes the main aspects and tasks for each sprint.
+
+### Sprints Tasks:
+ Lists the tasks assigned to each sprint.
+### Wireframes:
+ Visual representations of the game's interface and flow.
 
 ## Testing Documentation
 
@@ -181,7 +188,3 @@ We would like to acknowledge the support and guidance provided by the project te
 ## Contact
 
 If you have any questions, feedback, or inquiries, please contact us at copycat-simon-symphony@example.com.
-
----
-
-By following the above sections, users and developers can access the relevant documentation and resources associated with Copycat Simon's Symphony. The README provides a clear structure and easy navigation to facilitate understanding and engagement with the game and its development process.
