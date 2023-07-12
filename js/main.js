@@ -1,3 +1,5 @@
+// this is to push the last version correctly !
+
 // coloring the game title in main menu
 const textElement = document.getElementById("gameName");
 const text = textElement.textContent;
@@ -144,7 +146,7 @@ function addAndPlay() {
 }
 
 function playSequence() {
-  
+
   userTurn = false;
   document.querySelectorAll(".quarter").forEach((quarter) => {
     quarter.classList.remove("user-turn");
