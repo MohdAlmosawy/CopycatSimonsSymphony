@@ -211,7 +211,7 @@ function compareSequences() {
   } else {
     gameStatus = false;
     // Game over, show the score screen or perform other actions
-    showScoreScreen();
+    hallOfFame();
   }
 }
 
@@ -219,10 +219,22 @@ function showScoreScreen() {
   // Show the score screen
   const scoreScreen = document.getElementById("scoreScreen");
   scoreScreen.style.visibility = "visible";
-  // Wait for 3 seconds before hiding the score screen and showing the scoreboard screen
+  showScoreboardScreen();
+}
+
+// Wait for 3 seconds before hiding the score screen and showing the scoreboard screen
+function showScoreboardScreen(){
+
+  // hide the form directly
+  const congratulationsScreen = document.getElementById("congratulationsScreen");
+  congratulationsScreen.style.visibility = "hidden";
+  
+
   setTimeout(() => {
     // Hide the score screen
+    const scoreScreen = document.getElementById("scoreScreen");
     scoreScreen.style.visibility = "hidden";
+
     // Show the scoreboard screen
     const scoreboardScreen = document.getElementById("scoreboardScreen");
     scoreboardScreen.style.visibility = "visible";
@@ -244,6 +256,64 @@ function checkHighScore() {
     if (currentScore > highScore) {
       element.textContent = currentScore;
     }
+  });
+}
+
+// fuction to check hall of fame
+function hallOfFame() {
+  console.log("enter hall of fame function");
+  // Retrieve the top 5 scores from local storage
+  const topScores = JSON.parse(localStorage.getItem("topScores")) || [];
+
+  // if greater that 5th score add it
+  let isTopScore = false;
+
+  if (topScores.length < 5 || currentScore > topScores[topScores.length - 1].score) {
+    isTopScore = true;
+  }
+
+  if (isTopScore) {
+    const congratulationsScreen = document.getElementById(
+      "congratulationsScreen"
+    );
+    congratulationsScreen.style.visibility = "visible";
+    console.log("it is top score");
+  } else {
+    showScoreScreen();
+  }
+}
+
+const nameForm = document.getElementById("nameForm");
+nameForm.addEventListener("submit", handleFormSubmit);
+
+function handleFormSubmit(e) {
+
+  e.preventDefault();
+  // get username input and top score from storage
+  let usernameInput = document.getElementById("usernameinput");
+  let myUsername = usernameInput.value;
+  let topScores = JSON.parse(localStorage.getItem("topScores")) || [];
+
+
+  topScores.push({ username: myUsername, score: currentScore });
+  topScores.sort((a, b) => b.score - a.score);
+  topScores.splice(5);
+  localStorage.setItem("topScores", JSON.stringify(topScores));
+  console.log(JSON.stringify(topScores));
+  updateScoreboard(topScores);
+  showScoreScreen();
+}
+
+function updateScoreboard(topScores) {
+  const topUsersList = document.querySelector(".topUsers");
+  topUsersList.innerHTML = ""; // Clear the previous content
+
+  // Loop through the topScores array and create list items for each score
+  topScores.forEach((score, index) => {
+    const listItem = document.createElement("a");
+    listItem.classList.add("list-group-item", "list-group-item-action", "list-group-item-light");
+    listItem.textContent = `${score.username} - Score: ${score.score}`;
+    topUsersList.appendChild(listItem);
   });
 }
 
