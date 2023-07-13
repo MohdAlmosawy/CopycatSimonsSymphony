@@ -28,9 +28,9 @@ Note: The game requires an internet connection to load external dependencies and
 
 ## Approach Taken
 
-  - [1. Planning and Design:](#1-Planning-and-Design:)
+  - [1. Planning and Design:](#1-Planning-and-Design)
   - [2. Development](#2-Development)
-  - [3. Testing and Bug Fixing:](#3-Testing-and-Bug-Fixing:)
+  - [3. Testing and Bug Fixing:](#3-Testing-and-Bug-Fixing)
 
 For this project, an agile methodology and Kanban were adopted to plan and manage tasks efficiently. The development process followed the following steps:
 
