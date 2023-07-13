@@ -14,12 +14,12 @@ Copycat Simon's Symphony is a digital game inspired by the classic Simon Says ga
 
 ## Installation
 
-To install and set up the game, follow these steps:
+To access and use the app, follow these steps:
 
-1. Clone the repository to your local machine.
-2. Open the project folder in your preferred code editor.
-3. Open the `index.html` file in a web browser.
+1. Go to the following link: [Copycat Simon's Symphony](https://pages.git.generalassemb.ly/mohdalmosawy/CopycatSimonsSymphony/).
+2. The link will take you to the app's webpage hosted on GitHub Pages.
 
+That's it! You can now use the app directly from the provided link.
 Note: The game requires an internet connection to load external dependencies and resources.
 
 [TOP](#table-of-contents)
