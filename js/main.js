@@ -264,7 +264,7 @@ function checkHighScore() {
 
 // fuction to check hall of fame
 function hallOfFame() {
-  console.log("enter hall of fame function");
+  // console.log("enter hall of fame function");
   // Retrieve the top 5 scores from local storage
   const topScores = JSON.parse(localStorage.getItem("topScores")) || [];
 
@@ -280,7 +280,7 @@ function hallOfFame() {
       "congratulationsScreen"
     );
     congratulationsScreen.style.visibility = "visible";
-    console.log("it is top score");
+    // console.log("it is top score");
   } else {
     showScoreScreen();
   }
@@ -302,7 +302,7 @@ function handleFormSubmit(e) {
   topScores.sort((a, b) => b.score - a.score);
   topScores.splice(5);
   localStorage.setItem("topScores", JSON.stringify(topScores));
-  console.log(JSON.stringify(topScores));
+  // console.log(JSON.stringify(topScores));
   updateScoreboard(topScores);
   showScoreboardScreen();
 }

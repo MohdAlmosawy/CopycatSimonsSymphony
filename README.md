@@ -147,6 +147,7 @@ This will allow you to play another round within the same session.
   - [Data Structures](#data-structures)
   - [Code Organization](#code-organization)
   - [Important Modules or Components](#important-modules-or-components)
+  
 ### Architecture
 
 Copycat Simon's Symphony is a client-side web application built using HTML, CSS, and JavaScript. It follows a single-page application (SPA) architecture, where different sections of the game are dynamically shown or hidden based on user interactions.
@@ -244,7 +245,7 @@ Provides an overview of the project, objectives, timeframe, user stories, and mi
 
  ### Sprints Key Aspects, Goals, and Tasks :
 Outlines the project goals and specific objectives for each sprin, main aspects and tasks for each sprint, and the tasks assigned to each sprint.
-![Project Key Aspects, Goals, and Tasks ](Documentation/GoalsSprintsKeyAspectsAndSprintsTasks_page-0001.jpg)
+![Project Key Aspects, Goals, and Tasks](Documentation/GoalsSprintsKeyAspectsAndSprintsTasks_page-0001.jpg)
 ![Project Key Aspects, Goals, and Tasks](Documentation/GoalsSprintsKeyAspectsAndSprintsTasks_page-0002.jpg)
 ![Project Key Aspects, Goals, and Tasks](Documentation/GoalsSprintsKeyAspectsAndSprintsTasks_page-0003.jpg)
 ![Project Key Aspects, Goals, and Tasks](Documentation/GoalsSprintsKeyAspectsAndSprintsTasks_page-0004.jpg)
